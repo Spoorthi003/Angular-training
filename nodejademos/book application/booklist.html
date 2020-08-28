@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Book list page </title>
+    <style>
+       body{
+                background-color:beige;
+            }
+        table, td {
+          border: 1px solid black;
+          
+        }
+        </style>
+    
+</head>
+ <body>
+    <h1>Book List Page</h1>
+    <h4>Add Book Details Here</h4>
+    <a href="/book%20application/bookaddpage.html"><button>Add Book</button></a>
+    <h4>Find Book Details Here</h4>
+    <table id="myTable">
+        <tr>
+          <td>Wise Or Otherwise</td>
+         </tr>
+        <tr>
+          <td>Curtain</td>
+        </tr>
+        <tr>
+            <td>Harry Potter Series</td>
+          </tr>
+          <tr>
+            <td>Malgudi Days</td>
+          </tr>
+      </table>
+      <br> 
+      
+      <button onclick="myFunction()">Delete</button>
+      <a href="/book%20application/bookdetails.html"> <button >details</button><a>
+        <button>Edit</button>
+      <script>
+      function myFunction() {
+        document.getElementById("myTable").deleteRow(0);
+      }
+      </script>
+</body>
+</html>

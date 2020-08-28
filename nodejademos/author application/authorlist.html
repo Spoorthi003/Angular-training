@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Author list page </title>
+    <style>
+       body{
+                background-color:beige;
+            }
+        table, td {
+          border: 1px solid black;
+          
+        }
+        </style>
+    
+</head>
+ <body>
+    <h1>Author List Page</h1>
+    <h4>Add Author Details Here</h4>
+    <a href="/author%20application/authoraddpage.html"><button>Add Author</button></a>
+    <h4>Find Author Details Here</h4>
+    <table id="myTable">
+        <tr>
+          <td>Sudha Murty</td>
+         </tr>
+        <tr>
+          <td>Agata Cristie</td>
+        </tr>
+        <tr>
+            <td>J.k. Rowling</td>
+          </tr>
+          <tr>
+            <td>R.k. Narayan</td>
+          </tr>
+      </table>
+      <br> 
+      
+      <button onclick="myFunction()">Delete</button>
+      <a href="/author%20application/authordetails.html"> <button >details</button><a>
+        <button>Edit</button>
+      <script>
+      function myFunction() {
+        document.getElementById("myTable").deleteRow(0);
+      }
+      </script>
+</body>
+</html>

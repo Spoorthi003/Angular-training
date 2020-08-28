@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+        body{
+            background-color:beige;
+        }
+    </style>
+        <title>Author Create Page</title>
+        <script type="text/javascript">
+            function fn1(){
+              var str=document.getElementById("aname").value
+              alert("Author is submitted sucessfully :" + str);
+            }
+       
+           </script>
+    </head>
+    <body>
+        <h1>Create Author Page</h1>
+         <h4>Add your details here</h4>
+        <form>
+            <lable for="aname">Enter Name</lable><br>
+            <input type="text" id="aname" name="aname" ><br>
+            <lable for="phone">Enter phonenumber</lable><br>
+            <input type="phone" id="phone" name="phone" ><br>
+            <lable for="biograpgy">Enter biography</lable><br>
+            <input type="text" id="biograpgy" name="biograpgy" ><br>
+            <lable for="email">Enter email</lable><br>
+            <input type="email" id="email" name="email" ><br>
+             <button onclick="fn1()" id="btn1">Submit</button>
+
+        </form>
+    </body>
+</html>

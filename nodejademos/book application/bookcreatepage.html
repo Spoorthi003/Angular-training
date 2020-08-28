@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+        body{
+            background-color:beige;
+        }
+    </style>
+        <title>Book Details Entry Page</title>
+        <script type="text/javascript">
+            function fn1(){
+              var str=document.getElementById("bname").value
+              alert("Book Detail is submitted sucessfully :" + str);
+            }
+       
+           </script>
+    </head>
+    <body>
+        <h1>Create Book Page</h1>
+         <h4>Add your Book details here</h4>
+        <form>
+            <lable for="bname">Enter Book Name</lable><br>
+            <input type="bname" id="bname" name="bname" ><br>
+            <lable for="sumary">Enter Book sumary</lable><br>
+            <input type="sumary" id="phone" name="sumary" ><br>
+            <lable for="aname">Enter Author Name</lable><br>
+            <input type="aname" id="aname" name="aname" ><br>
+            <lable for="about">Enter About Author </lable><br>
+            <input type="about" id="about" name="about" ><br>
+             <button onclick="fn1()" id="btn1">Submit</button>
+
+        </form>
+    </body>
+</html>
