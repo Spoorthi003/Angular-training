@@ -11,11 +11,7 @@ export class BookListComponent implements OnInit {
 
   public showImages=true;
   public books: Book[];
-  public imageWidth=120;
-  public maxWidth=200; //should never go above
-  public minWidth=50;  //should never go below this
-  public delta=10;  //each click should increase/decrease by this value
-
+  
   constructor() { 
 
     this.books=[
@@ -68,22 +64,29 @@ export class BookListComponent implements OnInit {
     this.showImages=!this.showImages;
   }
 
-  increase(){
-      this.change(this.imageWidth+this.delta);
-  }
-  decrease(){
-    this.change(this.imageWidth-this.delta);
-}
-  change(newSize){
-    if(newSize<this.minWidth){
-      newSize=this.minWidth;
-    }
-    else if(newSize>this.maxWidth){
-      newSize=this.maxWidth;
-    }
-    this.imageWidth=newSize;
-  }
   ngOnInit(): void {
+  }
+
+
+  public imageWidth=120;
+  public maxWidth=200; //should never go above
+  public minWidth=50;  //should never go below this
+  public delta=10;  //each click should increase/decrease by this value
+
+  increaseSize(){
+    this.change(this.imageWidth+this.delta);
+  }
+  decreaseSize(){
+    this.change(this.imageWidth-this.delta);
+  }
+
+  change(newSize){
+    if(newSize<this.minWidth)
+      newSize=this.minWidth;
+    else if(newSize>this.maxWidth)
+      newSize=this.maxWidth;
+    this.imageWidth=newSize;
+
   }
 
 }

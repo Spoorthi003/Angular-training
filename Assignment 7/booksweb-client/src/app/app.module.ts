@@ -5,7 +5,9 @@ import {BooksWebHeaderComponent} from './books-web-header-component/books-web-he
 import {BooksWebFooterComponent} from './books-web-footer.component'; 
 
 import { BookInfoComponent } from './book-info/book-info.component';
-import { BookListComponent } from './book-list/book-list.component'; 
+import { BookListComponent } from './book-list/book-list.component';
+import { CaRangeComponent } from './ca-range/ca-range.component';
+import { RatingComponentComponent } from './rating-component/rating-component.component'; 
 
 
 
@@ -23,7 +25,11 @@ import { BookListComponent } from './book-list/book-list.component';
         
         BookInfoComponent,
         
-        BookListComponent
+        BookListComponent,
+        
+        CaRangeComponent,
+        
+        RatingComponentComponent
         
     ],    
     
