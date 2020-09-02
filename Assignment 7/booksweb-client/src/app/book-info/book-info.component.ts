@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Book } from '../service/book';
 
 @Component({
   selector: 'app-book-info',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookInfoComponent implements OnInit {
 
-  public book;
+  @Input() public book:Book;
 
   constructor() { 
 
@@ -18,7 +19,7 @@ export class BookInfoComponent implements OnInit {
       "bookId": "00108",
       "price": 199,
       "rating": 4.8,
-      "cover": "/assets/images/books/the-accursed-god.jpg",
+      "cover": "the-accursed-god.jpg",
       "tags": "Indian Epic, Mahabharata, Book Series"
     };
 

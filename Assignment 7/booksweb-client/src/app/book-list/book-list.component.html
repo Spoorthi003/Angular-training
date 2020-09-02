@@ -8,12 +8,24 @@
         <tr>
             <th *ngIf='showImages'>
                 Poster
-                <ca-range></ca-range>
+                <ca-range 
+                [min]='75' 
+                [max]='200' 
+                [delta]='15' 
+                
+                [(value)]='imageWidth' 
+                
+                
+
+
+                (changed)='onImageWidthInfoChanged($event)'
+                ></ca-range>
             </th>
             <th>Title</th>
             <th>Author</th>
             <th>Price</th>
-            <th>Rating </th>
+            <th>Release Date</th>
+            <th>Rating</th>
         </tr>
     </thead>
     <tbody>
@@ -22,19 +34,20 @@
 
 
             <td *ngIf='showImages'   >  
-                <img [hidden]='!showImages'  [src]='book.cover'  [style.width.px]='imageWidth' >
-            </td>
-            <td>{{book.title}}</td>
-            <td>{{book. author}}</td>
-            <td>{{book.price}}</td>
-            <td>
-                <app-rating-component [rating]="book.rating"></app-rating-component>
-                {{book.rating}}
                 
+                <img [hidden]='!showImages'  [src]='book.cover|altvalue:book.bookId:".jpg"|prefix:"/assets/images/books/"'  [style.width.px]='imageWidth' >
+            </td>
+            <td>{{book.title|uppercase}}</td>
+            <td>{{book. author|lowercase}} </td>
+            <td>{{book.price|currency:'INR'}}</td>
+            <td>{{book.releaseDate|date:"MMMM yyyy"|uppercase}}</td>
+            <td>
+                <ca-rating value='{{book.rating}}'  ></ca-rating>
+                {{book.rating|ratingadvise}} 
 
             </td>
         </tr>
-     
+      
         
     </tbody>
 </table>
