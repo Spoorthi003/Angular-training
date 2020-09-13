@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin-left: 50px;
+    background-image: url('book.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section{
+    margin-bottom: 10px;
+}
+ol{
+    list-style: none;
+    width : 400px;
+    -webkit-padding-start : 0px;
+}
+li{
+    border : 2px solid gray;
+    border-radius: 5px;
+    background-color: #e7e7e7;
+    padding : 10px;
+    margin-bottom: 10px;
+}
+
+.form label{
+    display: inline-block;
+    text-align: right;
+    
+}
+
+.form input{
+    display: inline-block;
+    text-align: left;
+    
+}
